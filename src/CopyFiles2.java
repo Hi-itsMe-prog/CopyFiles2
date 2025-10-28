@@ -96,8 +96,7 @@ public class CopyFiles2 {
         // Создаем тестовые файлы
         createTestFiles();
 
-        System.out.println("=== ЛАБОРАТОРНАЯ РАБОТА 6 ===");
-        System.out.println("=== СИНХРОННОЕ И АСИНХРОННОЕ КОПИРОВАНИЕ С NIO ===\n");
+        System.out.println("Синхронное копирование: ");
 
         // Тестируем синхронное копирование
         testSyncCopy();
@@ -126,7 +125,7 @@ public class CopyFiles2 {
     }
 
     private static void testSyncCopy() throws IOException {
-        System.out.println("\n--- ТЕСТ СИНХРОННОГО КОПИРОВАНИЯ ---");
+        System.out.println("Синхронное копирование: ");
 
         long startTime = System.currentTimeMillis();
 
@@ -150,7 +149,7 @@ public class CopyFiles2 {
     }
 
     private static void testAsyncCopy() throws Exception {
-        System.out.println("\n--- ТЕСТ АСИНХРОННОГО КОПИРОВАНИЯ ---");
+        System.out.println("Асинхронное копирование: ");
 
         long startTime = System.currentTimeMillis();
 
@@ -180,7 +179,7 @@ public class CopyFiles2 {
     }
 
     private static void testParallelAsyncCopy() throws Exception {
-        System.out.println("\n--- ТЕСТ ПАРАЛЛЕЛЬНОГО АСИНХРОННОГО КОПИРОВАНИЯ ---");
+        System.out.println("Асинхронное копирование: ");
 
         // Создаем пул потоков для параллельного выполнения
         ExecutorService executor = Executors.newFixedThreadPool(3);
