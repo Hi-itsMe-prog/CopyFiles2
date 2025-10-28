@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 
 public class CopyFiles2 {
 
-    // Синхронное копирование с использованием FileChannel
+
     public static void syncCopyWithFileChannel(String source, String destination) throws IOException {
         Path sourcePath = Paths.get(source);
         Path destPath = Paths.get(destination);
@@ -25,7 +25,6 @@ public class CopyFiles2 {
         }
     }
 
-    // Синхронное копирование с использованием Files.copy
     public static void syncCopyWithFiles(String source, String destination) throws IOException {
         Path sourcePath = Paths.get(source);
         Path destPath = Paths.get(destination);
@@ -33,7 +32,7 @@ public class CopyFiles2 {
         Files.copy(sourcePath, destPath, StandardCopyOption.REPLACE_EXISTING);
     }
 
-    // Асинхронное копирование с использованием CompletableFuture
+
     public static CompletableFuture<Void> asyncCopyWithCompletableFuture(String source, String destination) {
         return CompletableFuture.runAsync(() -> {
             try {
